@@ -1,7 +1,4 @@
 <?php
-
-namespace App\Http\Controllers\ddns;
-
 class serializeDatabase{
 
 }
@@ -10,7 +7,7 @@ class database{
     protected $dbpath,$table,$result;
 
     public function __construct(){
-        $this->dbpath = realpath(app_path()."/database");
+        $this->dbpath = realpath("/database");
     }
 
     public function table($tablename){
