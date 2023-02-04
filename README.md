@@ -13,4 +13,47 @@
 (new instance)->table('admin')->update(['username'=>'admin'],['password'=>'123123']);
 ```
 
-### 
+### 删除admin表中的admin用户
+```
+(new instance)->table('admin')->delete(['username'=>'admin']);
+```
+
+### 查询admin表 admin用户的密码
+```
+(new instance)->table('admin')->where(['username'=>'admin'])->first()['password']
+```
+
+### 对获取到的结果进行排序
+```
+(new instance)->table('admin')->where(['username'=>'admin'])->orderBy('username','desc')
+```
+
+### 获取查询的条目数量
+```
+(new instance)->table('admin')->where(['username'=>'admin'])->count()
+```
+
+### 获取第一个查询条目
+
+```
+(new instance)->table('admin')->where(['username'=>'admin'])->first()
+```
+
+### 获取最后一个
+
+```
+(new instance)->table('admin')->where(['username'=>'admin'])->last()
+```
+
+### 限制查询条目数量(1-5条)
+
+```
+(new instance)->table('admin')->where(['username'=>'admin'])->limit(1,5);
+```
+### 清空表
+
+```
+(new instance)->table('admin')->truncate()
+```
+
+
